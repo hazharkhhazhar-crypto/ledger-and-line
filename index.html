@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ledger & Line | ATS-Optimized Resumes & Expert Rewrite</title>
+    <title>Ledger & Line | Professional Career Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root { --ink: #1C2230; --brass: #9C7A3C; --paper: #F6F4EE; --forest: #2F4A3C; }
         body { font-family: 'Inter', sans-serif; background: var(--paper); color: var(--ink); margin: 0; line-height: 1.6; }
-        .wrap { max-width: 1040px; margin: 0 auto; padding: 60px 24px; }
-        .hero { text-align: center; padding: 60px 24px; background: white; border-bottom: 2px solid var(--brass); }
-        /* لوگوی اصلاح شده */
-        .brand-logo { font-family: 'Fraunces', serif; font-size: 48px; font-weight: 800; color: var(--brass); margin-bottom: 20px; display: block; letter-spacing: -1px; }
-        h1 { font-family: 'Fraunces', serif; font-size: 42px; margin-bottom: 20px; }
-        .btn { background: var(--ink); color: white; padding: 16px 32px; border: none; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block; transition: 0.3s; border-radius: 2px; }
+        .wrap { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .hero { text-align: center; padding: 60px 20px; background: white; border-bottom: 2px solid var(--brass); }
+        .brand-logo { font-family: 'Fraunces', serif; font-size: 48px; font-weight: 800; color: var(--brass); margin-bottom: 10px; display: block; }
+        h1 { font-family: 'Fraunces', serif; font-size: 36px; margin-bottom: 15px; }
+        .btn { background: var(--ink); color: white; padding: 14px 28px; border: none; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block; transition: 0.3s; border-radius: 2px; }
         .btn:hover { background: var(--forest); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .product { background: white; padding: 30px; border: 1px solid #ddd; display: flex; flex-direction: column; border-radius: 4px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px; }
+        .product { background: white; padding: 25px; border: 1px solid #ddd; border-radius: 4px; display: flex; flex-direction: column; }
         .price { font-size: 24px; font-weight: 700; margin: 15px 0; color: var(--brass); }
         .premium { border: 2px solid var(--brass); background: #fdfaf5; }
-        section h2 { font-family: 'Fraunces', serif; font-size: 32px; text-align: center; margin-bottom: 40px; }
+        .qr-section { text-align: center; background: white; padding: 40px; margin-top: 40px; border-top: 1px solid #ddd; }
+        img.qr-img { width: 160px; height: 160px; margin: 20px 0; border: 3px solid var(--brass); padding: 5px; }
     </style>
 </head>
 <body>
@@ -27,49 +27,52 @@
 <header class="hero">
     <span class="brand-logo">Ledger & Line</span>
     <h1>Your career deserves a better narrative.</h1>
-    <p>Professional, ATS-optimized templates engineered to bypass automated filters and secure interviews.</p>
-    <a href="#products" class="btn">Browse Collection</a>
+    <p>ATS-engineered templates and professional strategies to bypass hiring filters.</p>
+    <a href="#products" class="btn">View Services</a>
 </header>
 
 <section class="wrap" id="products">
-    <h2>Choose Your Path</h2>
     <div class="grid">
+        <!-- Standard -->
         <div class="product">
             <h3>Standard Templates</h3>
-            <p>High-precision layouts built for clarity and impact. Ready for immediate use.</p>
+            <p>Clean, high-precision layouts optimized for ATS readability.</p>
             <div class="price">$9</div>
-            <button class="btn" style="width: 100%;" onclick="openModal('Standard Template', 9)">Download Now</button>
+            <button class="btn" style="width:100%" onclick="alert('Please scan the QR code below to complete your $9 payment.')">Download</button>
         </div>
-
+        <!-- Audit -->
+        <div class="product">
+            <h3>Resume Audit</h3>
+            <p>A professional breakdown of missing keywords and structural gaps.</p>
+            <div class="price">$15</div>
+            <button class="btn" style="width:100%; background:var(--brass)" onclick="alert('Please scan the QR code below to complete your $15 payment.')">Get Audit</button>
+        </div>
+        <!-- Premium -->
         <div class="product premium">
-            <h3>Premium Rewrite Service</h3>
-            <p><strong>Let me handle the strategy.</strong> I will re-engineer your resume to align with target job descriptions and ATS requirements.</p>
-            <ul style="text-align: left; margin: 10px 0; padding-left: 20px;">
-                <li>✓ Strategic ATS Keyword Integration</li>
-                <li>✓ Impact-Driven Achievement Framing</li>
-                <li>✓ Bespoke Summary Customization</li>
+            <h3>Premium Rewrite</h3>
+            <p><strong>I manually re-engineer your profile.</strong></p>
+            <ul style="text-align:left; font-size:0.9em; padding-left:20px;">
+                <li>✓ ATS-Keyword Optimization</li>
+                <li>✓ Achievement Framing</li>
+                <li>✓ 48-Hour Fast Track</li>
             </ul>
             <div class="price">$49</div>
-            <button class="btn" style="background: var(--brass); width: 100%;" onclick="openModal('Full Rewrite Service', 49)">Get Your Resume Rewritten</button>
+            <button class="btn" style="width:100%" onclick="alert('Please scan the QR code below to complete your $49 payment.')">Get Rewritten</button>
         </div>
     </div>
 </section>
 
-<section class="wrap" id="about" style="background: white; border-top: 1px solid #ddd;">
-    <h2>Expertise & Integrity</h2>
-    <p style="text-align: center; max-width: 700px; margin: 0 auto;">Ledger & Line is a technical initiative founded by Ahmed Khezri. We prioritize precision and technical accuracy, ensuring that your professional profile is represented with the standard of excellence required for top-tier hiring systems.</p>
+<section class="qr-section">
+    <h2>Secure Payment</h2>
+    <p>Scan to pay via TON network:</p>
+    <img src="qr-code.jpg" alt="TON QR Code" class="qr-img">
+    <p style="font-size: 0.85em; word-break: break-all; padding: 0 20px;"><strong>Wallet Address:</strong><br>UQDblybQsSLnqYDb7128hTz_NL1xrRLAemUQjqzgy7VAVl35</p>
+    <p style="margin-top:20px; font-size:0.9em; color:#555;">After payment, email your transaction ID to: <strong>hazharkhhazhar@gmail.com</strong></p>
 </section>
 
-<script>
-    function openModal(name, price) {
-        const guarantee = "\n\n(Note: As a verified professional in the Occupational Health sector, I guarantee manual delivery and full support for your order.)";
-        if (price === 49) {
-            alert("To proceed with the Premium Rewrite Service ($49):\n\n1. Send payment to TON Address: UQDblybQsSLnqYDb7128hTz_NL1xrRLAemUQjqzgy7VAVl35\n\n2. Email your Transaction ID and your current resume to: hazharkhhazhar@gmail.com\n\nI will review your materials and contact you within 48 hours." + guarantee);
-        } else {
-            alert("To download the Template ($9):\n\n1. Send payment to TON Address: UQDblybQsSLnqYDb7128hTz_NL1xrRLAemUQjqzgy7VAVl35\n\n2. Email your Transaction ID to: hazharkhhazhar@gmail.com\n\nI will send the download link to your email immediately." + guarantee);
-        }
-    }
-</script>
+<section class="wrap" style="text-align:center; color:#777; font-size: 0.9em;">
+    <p>Ledger & Line | A professional technical initiative by Ahmed Khezri.</p>
+</section>
 
 </body>
 </html>
