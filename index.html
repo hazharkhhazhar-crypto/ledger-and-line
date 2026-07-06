@@ -1,61 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ledger & Line | Professional Resume Templates</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --ink: #1C2230; --brass: #9C7A3C; --paper: #F6F4EE; --forest: #2F4A3C; }
-        body { font-family: 'Inter', sans-serif; background: var(--paper); color: var(--ink); margin: 0; line-height: 1.6; }
-        .wrap { max-width: 1040px; margin: 0 auto; padding: 60px 24px; }
-        .hero { text-align: center; padding: 80px 24px; background: white; }
-        h1 { font-family: 'Fraunces', serif; font-size: 48px; margin-bottom: 20px; }
-        .btn { background: var(--ink); color: white; padding: 16px 32px; border: none; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block; transition: 0.3s; }
-        .btn:hover { background: var(--forest); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .product { background: white; padding: 30px; border: 1px solid #ddd; display: flex; flex-direction: column; }
-        .price { font-size: 24px; font-weight: 700; margin: 15px 0; color: var(--brass); }
-        .premium { border: 2px solid var(--brass); }
-        section h2 { font-family: 'Fraunces', serif; font-size: 32px; }
-    </style>
-</head>
-<body>
-
-<header class="hero">
-    <h1>Resumes built to <em>survive</em> the first six seconds.</h1>
-    <p>Professional, ATS-optimized templates engineered by Ahmed Khezri.</p>
-    <a href="#products" class="btn">Browse Templates</a>
-</header>
-
-<section class="wrap" id="about">
-    <h2>About Ledger & Line</h2>
-    <p>Ledger & Line is a technical initiative providing high-precision resume templates. Unlike generic designs, our templates are engineered to bypass ATS algorithms and get your profile into the hands of real hiring managers.</p>
-</section>
-
-<section class="wrap" id="products">
-    <h2>The Collection</h2>
-    <div class="grid">
-        <div class="product">
-            <h3>The Signal</h3>
-            <p>Perfect for Tech, Engineering & Analytics roles.</p>
-            <div class="price">$9</div>
-            <button class="btn" onclick="openModal('The Signal', 9)">Buy Template</button>
-        </div>
-        <div class="product premium">
-            <h3>Full Collection + Rewrite</h3>
-            <p><strong>BEST VALUE:</strong> All templates + Professional Resume Rewrite Service (48h turnaround).</p>
-            <div class="price">$49</div>
-            <button class="btn" onclick="openModal('Full Collection + Rewrite', 49)">Get Access</button>
-        </div>
+<section class="wrap" id="rewrite-service">
+    <div style="background: var(--ink); color: white; padding: 40px; border-radius: 8px;">
+        <h2 style="color: var(--brass);">Professional Resume Rewrite (The Premium Tier)</h2>
+        <p>Don't leave your career to chance. Send me your current resume and the target job description. I will:</p>
+        <ul style="line-height: 2;">
+            <li><strong>ATS Optimization:</strong> Mapping keywords to bypass automated filters.</li>
+            <li><strong>Impact Framing:</strong> Converting your duties into quantified achievements[cite: 5].</li>
+            <li><strong>Professional Polish:</strong> Tailoring your summary and skills for maximum impact.</li>
+        </ul>
+        <p><em>Turnaround time: 48 Hours.</em></p>
+        <button class="btn" style="background: var(--brass);" onclick="openModal('Full Rewrite Service', 49)">Get Your Resume Rewritten ($49)</button>
     </div>
 </section>
-
-<script>
-    function openModal(name, price) {
-        alert("To purchase " + name + " for $" + price + " USDT:\n\n1. Send the exact amount to TON Address: UQDblybQsSLnqYDb7128hTz_NL1xrRLAemUQjqzgy7VAVl35\n\n2. Email your Transaction ID (TxID) to: hazharkhhazhar@gmail.com\n\nWe will reply within 24 hours with your files.");
-    }
-</script>
-
-</body>
-</html>
