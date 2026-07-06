@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ledger & Line | ATS-Friendly Resume Templates & Expert Rewrite Service</title>
+    <title>Ledger & Line | ATS-Optimized Resumes & Expert Rewrite</title>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root { --ink: #1C2230; --brass: #9C7A3C; --paper: #F6F4EE; --forest: #2F4A3C; }
         body { font-family: 'Inter', sans-serif; background: var(--paper); color: var(--ink); margin: 0; line-height: 1.6; }
+        .logo { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 700; color: var(--ink); padding: 20px; text-align: center; border-bottom: 2px solid var(--brass); }
         .wrap { max-width: 1040px; margin: 0 auto; padding: 60px 24px; }
-        .hero { text-align: center; padding: 80px 24px; background: white; border-bottom: 1px solid #ddd; }
+        .hero { text-align: center; padding: 60px 24px; background: white; }
         h1 { font-family: 'Fraunces', serif; font-size: 48px; margin-bottom: 20px; }
         .btn { background: var(--ink); color: white; padding: 16px 32px; border: none; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block; transition: 0.3s; border-radius: 2px; }
         .btn:hover { background: var(--forest); }
@@ -22,10 +23,12 @@
 </head>
 <body>
 
+<div class="logo">Ledger & Line</div>
+
 <header class="hero">
-    <h1>Resumes built to <em>survive</em> the first six seconds.</h1>
-    <p>Professional, ATS-optimized templates engineered by Ahmed Khezri.</p>
-    <a href="#products" class="btn">Browse Templates</a>
+    <h1>Your career deserves a better narrative.</h1>
+    <p>Professional, ATS-optimized templates engineered to bypass automated filters and secure interviews.</p>
+    <a href="#products" class="btn">Browse Collection</a>
 </header>
 
 <section class="wrap" id="products">
@@ -33,41 +36,37 @@
     <div class="grid">
         <div class="product">
             <h3>Standard Templates</h3>
-            <p>Immediate download for self-starters. ATS-friendly designs that stand out.</p>
-            <div class="price">$9 - $12</div>
-            <button class="btn" style="width: 100%;" onclick="openModal('Standard Templates', 9)">Browse Templates</button>
+            <p>High-precision layouts built for clarity and impact. Ready for immediate use.</p>
+            <div class="price">$9</div>
+            <button class="btn" style="width: 100%;" onclick="openModal('Standard Template', 9)">Download Now</button>
         </div>
 
         <div class="product premium">
-            <h3>Professional Resume Rewrite</h3>
-            <p><strong>I handle the heavy lifting.</strong> I will optimize your resume for ATS systems and frame your achievements to get you hired.</p>
+            <h3>Premium Rewrite Service</h3>
+            <p><strong>Let me handle the strategy.</strong> I will re-engineer your resume to align with target job descriptions and ATS requirements.</p>
             <ul style="text-align: left; margin: 10px 0; padding-left: 20px;">
-                <li>✓ ATS Keyword Mapping[cite: 3, 5]</li>
-                <li>✓ Achievement Framing[cite: 5]</li>
-                <li>✓ Professional Summary Tailoring[cite: 3, 5]</li>
+                <li>✓ Strategic ATS Keyword Integration</li>
+                <li>✓ Impact-Driven Achievement Framing</li>
+                <li>✓ Bespoke Summary Customization</li>
             </ul>
             <div class="price">$49</div>
-            <button class="btn" style="background: var(--brass); width: 100%;" onclick="openModal('Full Rewrite Service', 49)">Get Your Resume Rewritten ($49)</button>
+            <button class="btn" style="background: var(--brass); width: 100%;" onclick="openModal('Full Rewrite Service', 49)">Get Your Resume Rewritten</button>
         </div>
     </div>
 </section>
 
-<section class="wrap" id="testimonials">
-    <h2>Success Stories</h2>
-    <div style="max-width: 600px; margin: 0 auto; font-style: italic; text-align: center;">
-        <p>"The Signal template helped me pass the ATS filters for my last 3 applications. Highly recommended!"</p>
-        <p><strong>— Software Engineer</strong></p>
-    </div>
-</section>
-
-<section class="wrap" id="about" style="background: white; border-top: 1px solid #ddd;">
-    <h2>About Ledger & Line</h2>
-    <p style="text-align: center; max-width: 700px; margin: 0 auto;">Ledger & Line is a technical initiative providing high-precision resume templates. Unlike generic designs, our templates are engineered to bypass ATS algorithms and get your profile into the hands of real hiring managers[cite: 2].</p>
+<section class="wrap" id="about" style="background: white;">
+    <h2>Expertise & Integrity</h2>
+    <p style="text-align: center; max-width: 700px; margin: 0 auto;">Ledger & Line is a technical initiative founded by Ahmed Khezri. We prioritize precision and technical accuracy, ensuring that your professional profile is represented with the standard of excellence required for top-tier hiring systems.</p>
 </section>
 
 <script>
     function openModal(name, price) {
-        alert("To purchase " + name + " for $" + price + " USDT:\n\n1. Send the exact amount to TON Address: UQDblybQsSLnqYDb7128hTz_NL1xrRLAemUQjqzgy7VAVl35\n\n2. Email your Transaction ID (TxID) to: hazharkhhazhar@gmail.com\n\nWe will reply within 24 hours.");
+        if (price === 49) {
+            alert("To proceed with the Premium Rewrite Service ($49):\n\n1. Send payment to TON Address: UQDblybQsSLnqYDb7128hTz_NL1xrRLAemUQjqzgy7VAVl35\n\n2. Email your Transaction ID and your current resume to: hazharkhhazhar@gmail.com\n\nI will review your materials and contact you within 48 hours.");
+        } else {
+            alert("To download the Template ($9):\n\n1. Send payment to TON Address: UQDblybQsSLnqYDb7128hTz_NL1xrRLAemUQjqzgy7VAVl35\n\n2. Email your Transaction ID to: hazharkhhazhar@gmail.com\n\nI will send the download link to your email immediately.");
+        }
     }
 </script>
 
