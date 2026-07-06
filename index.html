@@ -8,10 +8,11 @@
     <style>
         :root { --ink: #1C2230; --brass: #9C7A3C; --paper: #F6F4EE; --forest: #2F4A3C; }
         body { font-family: 'Inter', sans-serif; background: var(--paper); color: var(--ink); margin: 0; line-height: 1.6; }
-        .logo { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 700; color: var(--ink); padding: 20px; text-align: center; border-bottom: 2px solid var(--brass); }
         .wrap { max-width: 1040px; margin: 0 auto; padding: 60px 24px; }
-        .hero { text-align: center; padding: 60px 24px; background: white; }
-        h1 { font-family: 'Fraunces', serif; font-size: 48px; margin-bottom: 20px; }
+        /* تغییر در هدر برای نمایش قطعی لوگو */
+        .hero { text-align: center; padding: 60px 24px; background: white; border-bottom: 2px solid var(--brass); }
+        .brand-logo { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 700; color: var(--ink); margin-bottom: 20px; display: block; }
+        h1 { font-family: 'Fraunces', serif; font-size: 42px; margin-bottom: 20px; }
         .btn { background: var(--ink); color: white; padding: 16px 32px; border: none; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block; transition: 0.3s; border-radius: 2px; }
         .btn:hover { background: var(--forest); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
@@ -23,9 +24,8 @@
 </head>
 <body>
 
-<div class="logo">Ledger & Line</div>
-
 <header class="hero">
+    <span class="brand-logo">Ledger & Line</span>
     <h1>Your career deserves a better narrative.</h1>
     <p>Professional, ATS-optimized templates engineered to bypass automated filters and secure interviews.</p>
     <a href="#products" class="btn">Browse Collection</a>
@@ -55,7 +55,7 @@
     </div>
 </section>
 
-<section class="wrap" id="about" style="background: white;">
+<section class="wrap" id="about" style="background: white; border-top: 1px solid #ddd;">
     <h2>Expertise & Integrity</h2>
     <p style="text-align: center; max-width: 700px; margin: 0 auto;">Ledger & Line is a technical initiative founded by Ahmed Khezri. We prioritize precision and technical accuracy, ensuring that your professional profile is represented with the standard of excellence required for top-tier hiring systems.</p>
 </section>
