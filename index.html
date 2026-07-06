@@ -1,231 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ledger & Line — Resume Templates That Get Read</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper:#F6F4EE;
-    --paper-raised:#FFFFFF;
-    --ink:#1C2230;
-    --ink-soft:#4A5165;
-    --line:#D8D3C4;
-    --line-strong:#B9B29B;
-    --brass:#9C7A3C;
-    --brass-soft:#EFE4CC;
-    --forest:#2F4A3C;
-    --forest-soft:#E4ECE6;
-    --stamp-red:#8C2F2F;
-  }
-  *{box-sizing:border-box;}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.6;}
-  .display{font-family:'Fraunces',serif;}
-  .mono{font-family:'Courier Prime',monospace;}
-  a{color:inherit;}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
-
-  /* NAV */
-  nav{position:sticky;top:0;z-index:30;background:rgba(246,244,238,0.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
-  .nav-inner{max-width:1040px;margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;}
-  .logo{font-family:'Fraunces',serif;font-weight:600;font-size:20px;letter-spacing:-0.01em;}
-  .logo span{color:var(--brass);}
-  .nav-cta{background:var(--ink);color:var(--paper);border:none;padding:10px 20px;border-radius:2px;font-weight:600;font-size:13.5px;cursor:pointer;}
-
-  /* HERO */
-  .hero{padding:80px 24px 60px;position:relative;overflow:hidden;}
-  .hero-inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
-  @media(max-width:840px){.hero-inner{grid-template-columns:1fr;}}
-  .eyebrow{font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.08em;color:var(--forest);background:var(--forest-soft);display:inline-block;padding:5px 11px;border-radius:2px;margin-bottom:22px;}
-  h1{font-size:46px;font-weight:600;line-height:1.15;margin:0 0 20px;letter-spacing:-0.01em;}
-  h1 em{font-style:italic;color:var(--brass);}
-  .hero-sub{color:var(--ink-soft);font-size:16.5px;max-width:420px;margin:0 0 30px;}
-  .btn{display:inline-flex;align-items:center;gap:8px;border:none;padding:14px 26px;border-radius:2px;font-weight:600;font-size:15px;cursor:pointer;transition:.15s;}
-  .btn-primary{background:var(--ink);color:var(--paper);}
-  .btn-primary:hover{background:var(--forest);}
-  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line-strong);}
-  .btn-ghost:hover{border-color:var(--ink);}
-  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
-
-  /* signature: stacked document cards */
-  .doc-stack{position:relative;height:400px;}
-  .doc-card{position:absolute;width:78%;aspect-ratio:8.5/11;background:var(--paper-raised);border:1px solid var(--line);box-shadow:0 10px 30px rgba(28,34,48,0.10);padding:22px 24px;}
-  .doc-card.back{top:6%;left:18%;transform:rotate(-6deg);opacity:.55;}
-  .doc-card.mid{top:2%;left:8%;transform:rotate(3deg);opacity:.8;}
-  .doc-card.front{top:0;left:0;transform:rotate(-2deg);}
-  .doc-name{font-family:'Fraunces',serif;font-weight:600;font-size:15px;margin-bottom:2px;}
-  .doc-role{font-size:10px;color:var(--brass);font-weight:600;margin-bottom:10px;}
-  .doc-rule{height:1px;background:var(--line);margin:8px 0;}
-  .doc-line{height:5px;background:var(--line);border-radius:1px;margin-bottom:6px;}
-  .doc-line.w60{width:60%;}
-  .doc-line.w80{width:80%;}
-  .doc-line.w40{width:40%;}
-  .stamp{position:absolute;bottom:26px;right:24px;border:2px solid var(--stamp-red);color:var(--stamp-red);font-family:'Courier Prime',monospace;font-size:11px;font-weight:700;padding:4px 10px;border-radius:3px;transform:rotate(-8deg);letter-spacing:0.05em;opacity:0.85;}
-
-  /* PRODUCTS */
-  .section{padding:70px 24px;}
-  .section-head{margin-bottom:36px;}
-  .section-eyebrow{font-family:'Courier Prime',monospace;font-size:12px;color:var(--ink-soft);letter-spacing:0.06em;margin-bottom:8px;}
-  .section-title{font-family:'Fraunces',serif;font-size:30px;font-weight:600;}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;}
-  .product{background:var(--paper-raised);border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;gap:12px;}
-  .product-tag{font-family:'Courier Prime',monospace;font-size:11px;color:var(--forest);background:var(--forest-soft);display:inline-block;padding:3px 9px;width:fit-content;}
-  .product-name{font-family:'Fraunces',serif;font-size:20px;font-weight:600;margin:2px 0 0;}
-  .product-desc{color:var(--ink-soft);font-size:14px;flex:1;}
-  .product-foot{display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--line);}
-  .price{font-family:'Courier Prime',monospace;font-size:19px;font-weight:700;}
-  .buy-btn{background:var(--ink);color:var(--paper);border:none;padding:9px 18px;border-radius:2px;font-weight:600;font-size:13px;cursor:pointer;}
-  .buy-btn:hover{background:var(--brass);}
-
-  /* HOW IT WORKS */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-  @media(max-width:700px){.steps{grid-template-columns:1fr;}}
-  .step-num{font-family:'Fraunces',serif;font-size:34px;color:var(--line-strong);font-weight:600;margin-bottom:6px;}
-  .step-title{font-weight:700;margin-bottom:6px;}
-  .step-desc{color:var(--ink-soft);font-size:14px;}
-
-  footer{border-top:1px solid var(--line);padding:36px 24px;text-align:center;color:var(--ink-soft);font-size:13px;}
-
-  /* MODAL */
-  .modal-overlay{position:fixed;inset:0;background:rgba(28,34,48,0.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:50;}
-  .modal-overlay.open{display:flex;}
-  .modal{background:var(--paper-raised);max-width:420px;width:100%;padding:30px;border:1px solid var(--line);}
-  .modal-title{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin:0 0 6px;}
-  .modal-sub{color:var(--ink-soft);font-size:13.5px;margin-bottom:20px;}
-  .pay-box{background:var(--paper);border:1px dashed var(--line-strong);padding:14px 16px;margin-bottom:16px;}
-  .pay-box .label{font-family:'Courier Prime',monospace;font-size:11px;color:var(--ink-soft);margin-bottom:4px;}
-  .pay-box .value{font-family:'Courier Prime',monospace;font-size:13px;word-break:break-all;}
-  .close-btn{background:none;border:none;font-size:20px;cursor:pointer;color:var(--ink-soft);float:left;}
-  .setup-note{background:var(--brass-soft);border:1px solid var(--brass);padding:12px 14px;font-size:12.5px;color:#5c4415;margin-top:14px;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ledger & Line | Professional ATS-Friendly Resumes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --ink: #1C2230; --brass: #9C7A3C; --paper: #F6F4EE; }
+        body { font-family: 'Inter', sans-serif; background: var(--paper); color: var(--ink); margin: 0; line-height: 1.6; }
+        .wrap { max-width: 1040px; margin: 0 auto; padding: 40px 24px; }
+        .hero { text-align: center; padding: 80px 24px; }
+        h1 { font-family: 'Fraunces', serif; font-size: 52px; margin-bottom: 20px; }
+        .btn { background: var(--ink); color: white; padding: 16px 32px; border: none; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .product { background: white; padding: 30px; border: 1px solid #ddd; text-align: left; display: flex; flex-direction: column; }
+        .price { font-size: 24px; font-weight: 700; margin: 15px 0; }
+        .premium { border: 2px solid var(--brass); transform: scale(1.05); }
+    </style>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <div class="logo">Ledger <span>&</span> Line</div>
-    <button class="nav-cta" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Browse Templates</button>
-  </div>
-</nav>
+<header class="hero">
+    <h1>Resumes built to <em>survive</em> the first six seconds.</h1>
+    <p>Professional, ATS-optimized templates that help you land interviews, not just applications.</p>
+    <a href="#products" class="btn">Browse Templates</a>
+</header>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div>
-      <div class="eyebrow">PAID IN CRYPTO · INSTANT DOWNLOAD</div>
-      <h1>Resumes built to <em>survive</em> the first six seconds.</h1>
-      <p class="hero-sub">Clean, ATS-friendly templates for people who'd rather spend their time job-hunting than fighting with margins in Word.</p>
-      <p style="font-family:'Courier Prime',monospace;font-size:12.5px;color:var(--forest);margin:-14px 0 26px;">✓ Secure crypto checkout — no bank card needed, works anywhere in the world</p>
-      <div class="hero-cta">
-        <button class="btn btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">See templates</button>
-        <button class="btn btn-ghost" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">How it works</button>
-      </div>
+<section class="wrap" id="products">
+    <div class="grid">
+        <div class="product">
+            <h3>The Signal</h3>
+            <p>Perfect for Tech & Analytics.</p>
+            <div class="price">$9</div>
+            <button class="btn" onclick="openModal('The Signal', 9)">Buy Now</button>
+        </div>
+        <div class="product premium">
+            <h3>Full Collection + Rewrite</h3>
+            <p><strong>BEST VALUE:</strong> All templates + Professional Resume Rewrite Service.</p>
+            <div class="price">$49</div>
+            <button class="btn" onclick="openModal('Full Collection + Rewrite', 49)">Get Access</button>
+        </div>
     </div>
-    <div class="doc-stack">
-      <div class="doc-card back">
-        <div class="doc-name">J. Whitfield</div><div class="doc-role">PRODUCT DESIGNER</div>
-        <div class="doc-rule"></div>
-        <div class="doc-line w80"></div><div class="doc-line w60"></div><div class="doc-line w40"></div>
-      </div>
-      <div class="doc-card mid">
-        <div class="doc-name">A. Odutayo</div><div class="doc-role">DATA ANALYST</div>
-        <div class="doc-rule"></div>
-        <div class="doc-line w60"></div><div class="doc-line w80"></div><div class="doc-line w40"></div>
-      </div>
-      <div class="doc-card front">
-        <div class="doc-name">M. Laurent</div><div class="doc-role">FRONTEND ENGINEER</div>
-        <div class="doc-rule"></div>
-        <div class="doc-line w80"></div><div class="doc-line w40"></div><div class="doc-line w60"></div>
-        <div class="stamp">HIRED</div>
-      </div>
-    </div>
-  </div>
 </section>
 
-<section class="section" id="products">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-eyebrow">THE COLLECTION</div>
-      <div class="section-title">Templates</div>
-    </div>
-    <div class="grid" id="productGrid"></div>
-  </div>
+<!-- بخش اعتماد سازی -->
+<section style="text-align: center; padding: 50px; background: #e5e2d9;">
+    <h2>Why Ledger & Line?</h2>
+    <p>✓ ATS-Friendly Structures | ✓ Crypto-Secured | ✓ Instant Download</p>
 </section>
-
-<section class="section" id="how" style="background:var(--paper-raised);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-eyebrow">THE PROCESS</div>
-      <div class="section-title">How it works</div>
-    </div>
-    <div class="steps">
-      <div><div class="step-num">01</div><div class="step-title">Pick a template</div><div class="step-desc">Choose the design that fits your field. Preview before you buy.</div></div>
-      <div><div class="step-num">02</div><div class="step-title">Pay with crypto</div><div class="step-desc">Send USDT to the wallet shown at checkout. No card, no bank, no borders.</div></div>
-      <div><div class="step-num">03</div><div class="step-title">Download & edit</div><div class="step-desc">Get the .docx immediately. Open in Word or Google Docs and fill in your details.</div></div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  Ledger & Line — digital templates, delivered instantly. Payments via cryptocurrency only.
-</footer>
-
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal">
-    <button class="close-btn" onclick="closeModal()">&times;</button>
-    <div style="clear:both"></div>
-    <div class="modal-title" id="modalProductName">Template</div>
-    <div class="modal-sub">Send the exact amount below, then email your transaction ID to get your download link. Crypto payments are secure and don't require any bank card or personal financial info.</div>
-    <div class="pay-box">
-      <div class="label">AMOUNT (USDT)</div>
-      <div class="value" id="modalPrice">$0</div>
-    </div>
-    <div class="pay-box">
-      <div class="label">WALLET ADDRESS (USDT · TON Network)</div>
-      <div class="value">UQDblybQsSLnqYDb7128hTz_NL1xrRLAemUQjqzgy7VAVl35</div>
-    </div>
-    <div class="pay-box">
-      <div class="label">SEND CONFIRMATION TO</div>
-      <div class="value">hazharkhhazhar@gmail.com</div>
-    </div>
-    <div class="setup-note">⚠️ Important: send only USDT on the <strong>TON network</strong> (Tonkeeper-compatible) to this address. Sending via a different network (e.g. Ethereum, BNB Chain, Tron) may result in permanent loss of funds.</div>
-  </div>
-</div>
 
 <script>
-const products = [
-  { tag: "MOST POPULAR", name: "The Signal", desc: "A confident single-column layout for tech, product, and analytics roles. Built to pass ATS parsing cleanly.", price: 9 },
-  { tag: "CLASSIC", name: "The Ledger", desc: "Traditional two-tone structure for finance, law, and operations resumes. Understated and precise.", price: 9 },
-  { tag: "CREATIVE", name: "The Folio", desc: "A touch of personality for design and marketing roles, without sacrificing readability.", price: 12 },
-  { tag: "NEW", name: "Cover Letter — Matched Set", desc: "A cover letter template styled to match The Signal, with prompts for every paragraph so you're never staring at a blank page.", price: 6 },
-  { tag: "BUNDLE", name: "Full Collection (4 templates)", desc: "All current templates plus every future release, in editable .docx format.", price: 24 },
-];
-
-const grid = document.getElementById('productGrid');
-grid.innerHTML = products.map(p => `
-  <div class="product">
-    <span class="product-tag">${p.tag}</span>
-    <h3 class="product-name">${p.name}</h3>
-    <p class="product-desc">${p.desc}</p>
-    <div class="product-foot">
-      <span class="price">$${p.price}</span>
-      <button class="buy-btn" onclick="openModal('${p.name.replace(/'/g,"")}', ${p.price})">Buy</button>
-    </div>
-  </div>
-`).join('');
-
-function openModal(name, price){
-  document.getElementById('modalProductName').textContent = name;
-  document.getElementById('modalPrice').textContent = '$' + price + ' in USDT';
-  document.getElementById('modalOverlay').classList.add('open');
-}
-function closeModal(){
-  document.getElementById('modalOverlay').classList.remove('open');
-}
-document.getElementById('modalOverlay').addEventListener('click', e => {
-  if(e.target.id === 'modalOverlay') closeModal();
-});
+    function openModal(name, price) {
+        alert("To purchase " + name + " for $" + price + " USDT, please send the amount to TON Address: UQDblybQsSLnqYDb7128hTz_NL1xrRLAemUQjqzgy7VAVl35 and email your TxID to hazharkhhazhar@gmail.com");
+    }
 </script>
+
 </body>
 </html>
