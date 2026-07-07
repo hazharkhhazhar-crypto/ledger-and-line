@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ledger & Line | Professional Career Solutions</title>
+    <title>Ledger & Line | Professional ATS Career Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root { --ink: #1C2230; --brass: #9C7A3C; --paper: #F6F4EE; --forest: #2F4A3C; }
@@ -18,9 +18,9 @@
         .product { background: white; padding: 25px; border: 1px solid #ddd; border-radius: 4px; display: flex; flex-direction: column; }
         .price { font-size: 24px; font-weight: 700; margin: 15px 0; color: var(--brass); }
         .premium { border: 2px solid var(--brass); background: #fdfaf5; }
-        .qr-section { text-align: center; background: white; padding: 40px; margin-top: 40px; border-top: 1px solid #ddd; }
-        <!-- کد را به این شکل تغییر دهید -->
-<img src="https://raw.githubusercontent.com/hazharkhhazhar-crypto/ledger-and-line/main/qr-code.jpg" alt="TON QR Code" class="qr-img">
+        .section-box { background: white; padding: 40px; border-top: 1px solid #ddd; text-align: center; }
+        img.qr-img { width: 160px; height: 160px; margin: 20px 0; border: 3px solid var(--brass); padding: 5px; }
+        input, textarea { padding: 12px; width: 100%; max-width: 400px; margin: 10px 0; border: 1px solid #ddd; border-radius: 2px; }
     </style>
 </head>
 <body>
@@ -34,21 +34,18 @@
 
 <section class="wrap" id="products">
     <div class="grid">
-        <!-- Standard -->
         <div class="product">
             <h3>Standard Templates</h3>
             <p>Clean, high-precision layouts optimized for ATS readability.</p>
             <div class="price">$9</div>
-            <button class="btn" style="width:100%" onclick="alert('Please scan the QR code below to complete your $9 payment.')">Download</button>
+            <button class="btn" style="width:100%" onclick="alert('Proceed with $9 payment via QR code below.')">Download</button>
         </div>
-        <!-- Audit -->
         <div class="product">
             <h3>Resume Audit</h3>
             <p>A professional breakdown of missing keywords and structural gaps.</p>
             <div class="price">$15</div>
-            <button class="btn" style="width:100%; background:var(--brass)" onclick="alert('Please scan the QR code below to complete your $15 payment.')">Get Audit</button>
+            <button class="btn" style="width:100%; background:var(--brass)" onclick="alert('Proceed with $15 payment via QR code below.')">Get Audit</button>
         </div>
-        <!-- Premium -->
         <div class="product premium">
             <h3>Premium Rewrite</h3>
             <p><strong>I manually re-engineer your profile.</strong></p>
@@ -58,22 +55,41 @@
                 <li>✓ 48-Hour Fast Track</li>
             </ul>
             <div class="price">$49</div>
-            <button class="btn" style="width:100%" onclick="alert('Please scan the QR code below to complete your $49 payment.')">Get Rewritten</button>
+            <button class="btn" style="width:100%" onclick="alert('Proceed with $49 payment via QR code below.')">Get Rewritten</button>
         </div>
     </div>
 </section>
 
-<section class="qr-section">
-    <h2>Secure Payment</h2>
-    <p>Scan to pay via TON network:</p>
-    <img src="qr-code.jpg" alt="TON QR Code" class="qr-img">
-    <p style="font-size: 0.85em; word-break: break-all; padding: 0 20px;"><strong>Wallet Address:</strong><br>UQDblybQsSLnqYDb7128hTz_NL1xrRLAemUQjqzgy7VAVl35</p>
-    <p style="margin-top:20px; font-size:0.9em; color:#555;">After payment, email your transaction ID to: <strong>hazharkhhazhar@gmail.com</strong></p>
+<section class="section-box" style="background: #fdfaf5;">
+    <h2>Free Initial Audit</h2>
+    <p>Not sure if you need a rewrite? Send me your details for a quick check.</p>
+    <form action="mailto:hazharkhhazhar@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required><br>
+        <textarea name="comment" placeholder="What is your target job title?" required></textarea><br>
+        <button type="submit" class="btn" style="background: var(--brass);">Request Free Audit</button>
+    </form>
 </section>
 
-<section class="wrap" style="text-align:center; color:#777; font-size: 0.9em;">
-    <p>Ledger & Line | A professional technical initiative by Ahmed Khezri.</p>
+<section class="section-box">
+    <h2>Frequently Asked Questions</h2>
+    <div style="max-width: 600px; margin: 0 auto; text-align: left;">
+        <p><strong>Q: Will my resume pass ATS filters?</strong><br>A: Yes, we use industry-specific keywords to ensure you rank high in hiring systems.</p>
+        <p><strong>Q: Why pay via TON?</strong><br>A: It ensures fast, secure, and borderless transactions.</p>
+        <p><strong>Q: How long does it take?</strong><br>A: Premium orders are delivered within 48 hours.</p>
+    </div>
 </section>
+
+<section class="section-box">
+    <h2>Secure Payment</h2>
+    <p>Scan to pay via TON network:</p>
+    <img src="https://raw.githubusercontent.com/hazharkhhazhar-crypto/ledger-and-line/main/qr-code.jpg" alt="TON QR Code" class="qr-img">
+    <p style="word-break: break-all;"><strong>Wallet Address:</strong><br>UQDblybQsSLnqYDb7128hTz_NL1xrRLAemUQjqzgy7VAVl35</p>
+    <p style="font-size:0.9em; color:#555;">After payment, email your transaction ID to: <strong>hazharkhhazhar@gmail.com</strong></p>
+</section>
+
+<footer class="wrap" style="text-align:center; color:#777; font-size: 0.8em;">
+    <p>Ledger & Line | A professional technical initiative by Ahmed Khezri.</p>
+</footer>
 
 </body>
 </html>
