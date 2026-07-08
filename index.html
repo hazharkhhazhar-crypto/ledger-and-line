@@ -1,95 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ledger & Line | Professional ATS Career Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --ink: #1C2230; --brass: #9C7A3C; --paper: #F6F4EE; --forest: #2F4A3C; }
-        body { font-family: 'Inter', sans-serif; background: var(--paper); color: var(--ink); margin: 0; line-height: 1.6; }
-        .wrap { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        .hero { text-align: center; padding: 60px 20px; background: white; border-bottom: 2px solid var(--brass); }
-        .brand-logo { font-family: 'Fraunces', serif; font-size: 48px; font-weight: 800; color: var(--brass); margin-bottom: 10px; display: block; }
-        h1 { font-family: 'Fraunces', serif; font-size: 36px; margin-bottom: 15px; }
-        .btn { background: var(--ink); color: white; padding: 14px 28px; border: none; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block; transition: 0.3s; border-radius: 2px; }
-        .btn:hover { background: var(--forest); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px; }
-        .product { background: white; padding: 25px; border: 1px solid #ddd; border-radius: 4px; display: flex; flex-direction: column; }
-        .price { font-size: 24px; font-weight: 700; margin: 15px 0; color: var(--brass); }
-        .premium { border: 2px solid var(--brass); background: #fdfaf5; }
-        .section-box { background: white; padding: 40px; border-top: 1px solid #ddd; text-align: center; }
-        img.qr-img { width: 160px; height: 160px; margin: 20px 0; border: 3px solid var(--brass); padding: 5px; }
-        input, textarea { padding: 12px; width: 100%; max-width: 400px; margin: 10px 0; border: 1px solid #ddd; border-radius: 2px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ledger & Line | ATS Resume Templates, Audits & Rewrites</title>
+<meta name="description" content="ATS-safe resume templates, keyword audits, and hand rewrites by Ahmed Khezri. Clear pricing, 48-hour turnaround, ledger-simple process.">
+<meta property="og:title" content="Ledger & Line | ATS Resume Templates, Audits & Rewrites">
+<meta property="og:description" content="ATS-safe resume templates, keyword audits, and hand rewrites — priced and delivered like a ledger entry: clear, itemized, closed on time.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%232F4A3C'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%239C7A3C' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1C2230;
+    --brass: #9C7A3C;
+    --paper: #F6F4EE;
+    --forest: #2F4A3C;
+    --line: #D8D2C2;
+    --muted: #6B6558;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.6;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+
+  :focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+
+  /* Header */
+  .hero {
+    text-align: center;
+    padding: 70px 20px 60px;
+    background: white;
+    border-bottom: 2px solid var(--brass);
+  }
+  .brand-logo {
+    font-family: 'Fraunces', serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--forest);
+    margin-bottom: 6px;
+    display: block;
+    letter-spacing: -0.5px;
+  }
+  .brand-logo .amp { color: var(--brass); }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+  h1 { font-family: 'Fraunces', serif; font-size: 38px; margin: 0 0 15px; max-width: 620px; margin-left: auto; margin-right: auto; }
+  .hero p.sub { max-width: 520px; margin: 0 auto 30px; color: var(--muted); font-size: 17px; }
+  .btn {
+    background: var(--ink); color: white; padding: 14px 30px; border: none;
+    cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block;
+    transition: 0.2s; border-radius: 2px; font-size: 15px;
+  }
+  .btn:hover { background: var(--forest); }
+  .btn.brass { background: var(--brass); }
+  .btn.brass:hover { background: #82652f; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+  .btn.ghost:hover { background: var(--ink); color: white; }
+
+  /* Ledger line — the signature motif: a receipt-style row with a dotted leader */
+  .ledger-row {
+    display: flex; align-items: baseline; gap: 10px;
+    padding: 10px 0; border-bottom: 1px dashed var(--line);
+  }
+  .ledger-row:last-child { border-bottom: none; }
+  .ledger-row .label { font-weight: 600; white-space: nowrap; }
+  .ledger-row .leader { flex: 1; border-bottom: 1px dotted var(--muted); height: 1px; margin-bottom: 5px; }
+  .ledger-row .amount { font-family: 'JetBrains Mono', monospace; font-weight: 600; color: var(--forest); white-space: nowrap; }
+
+  /* Sample edit — signature hero visual */
+  .sample-slip {
+    background: white; border: 1px solid var(--line); border-radius: 4px;
+    max-width: 480px; margin: 0 auto; padding: 22px 26px; text-align: left;
+    box-shadow: 0 8px 24px rgba(28,34,48,0.06);
+  }
+  .sample-slip .slip-head { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; margin-bottom: 14px; display: flex; justify-content: space-between; }
+  .slip-line { font-size: 14.5px; margin: 8px 0; padding: 6px 10px; border-radius: 2px; }
+  .slip-line.before { color: #8a5252; background: #fbf1f1; text-decoration: line-through; text-decoration-color: #c98d8d; }
+  .slip-line.after { color: var(--forest); background: #f1f5f2; font-weight: 600; }
+
+  section { padding: 0; }
+  .section-title { font-family: 'Fraunces', serif; font-size: 28px; margin-bottom: 6px; }
+  .section-lead { color: var(--muted); margin-bottom: 34px; max-width: 520px; }
+  .centered { text-align: center; }
+  .centered .section-lead { margin-left: auto; margin-right: auto; }
+
+  /* Products */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 10px; }
+  .product { background: white; padding: 26px; border: 1px solid var(--line); border-radius: 4px; display: flex; flex-direction: column; }
+  .product h3 { font-family: 'Fraunces', serif; font-size: 20px; margin: 0 0 10px; }
+  .product p { color: var(--muted); font-size: 14.5px; flex-grow: 1; }
+  .price { font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 700; margin: 14px 0; color: var(--brass); }
+  .premium { border: 2px solid var(--brass); background: #fdfaf5; position: relative; }
+  .premium::before {
+    content: "Most chosen"; position: absolute; top: -12px; right: 16px;
+    background: var(--brass); color: white; font-size: 11px; font-weight: 700;
+    padding: 3px 10px; border-radius: 2px; letter-spacing: 0.5px;
+  }
+  .product ul { text-align: left; font-size: 14px; padding-left: 20px; color: var(--ink); margin: 8px 0 16px; }
+  .product ul li { margin-bottom: 4px; }
+
+  /* About */
+  .about-card { display: flex; gap: 26px; align-items: flex-start; background: white; border: 1px solid var(--line); border-radius: 4px; padding: 30px; }
+  .about-avatar {
+    flex-shrink: 0; width: 64px; height: 64px; border-radius: 50%; background: var(--forest);
+    color: white; font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .about-card p { color: var(--muted); margin: 0 0 10px; font-size: 15px; }
+  .about-card p:last-child { margin-bottom: 0; }
+
+  .section-box { background: white; padding: 50px 20px; border-top: 1px solid var(--line); }
+  .section-box.tint { background: #fdfaf5; }
+
+  form.stack { max-width: 420px; margin: 0 auto; }
+  form.stack label { display: block; font-size: 13px; font-weight: 600; margin: 14px 0 6px; }
+  input, textarea, select {
+    padding: 12px; width: 100%; border: 1px solid var(--line); border-radius: 2px;
+    font-family: 'Inter', sans-serif; font-size: 14px; background: var(--paper);
+  }
+  textarea { min-height: 90px; resize: vertical; }
+  .form-note { font-size: 12.5px; color: var(--muted); margin-top: 14px; }
+
+  .faq-item { max-width: 620px; margin: 0 auto 20px; }
+  .faq-item h4 { font-size: 15.5px; margin: 0 0 6px; }
+  .faq-item p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+  .qr-img { width: 160px; height: 160px; margin: 20px auto 10px; border: 3px solid var(--brass); padding: 5px; display: block; background: white; }
+  .wallet-box {
+    max-width: 480px; margin: 16px auto 0; background: var(--paper); border: 1px solid var(--line);
+    border-radius: 4px; padding: 14px 18px; font-family: 'JetBrains Mono', monospace; font-size: 13px;
+    word-break: break-all; position: relative;
+  }
+  .copy-btn {
+    margin-top: 10px; font-size: 12.5px; padding: 6px 14px; background: var(--ink); color: white;
+    border: none; border-radius: 2px; cursor: pointer;
+  }
+  .copy-btn:hover { background: var(--forest); }
+  .alt-pay { font-size: 13.5px; color: var(--muted); margin-top: 18px; }
+
+  footer.wrap { text-align: center; color: var(--muted); font-size: 13px; padding-top: 30px; padding-bottom: 50px; }
+  footer.wrap .legal { margin-top: 10px; font-size: 12px; }
+  footer.wrap a.underline { text-decoration: underline; }
+
+  @media (max-width: 520px) {
+    h1 { font-size: 30px; }
+    .about-card { flex-direction: column; }
+    .premium::before { top: -12px; right: 50%; transform: translateX(50%); }
+  }
+</style>
 </head>
 <body>
 
 <header class="hero">
-    <span class="brand-logo">Ledger & Line</span>
-    <h1>Your career deserves a better narrative.</h1>
-    <p>ATS-engineered templates and professional strategies to bypass hiring filters.</p>
-    <a href="#products" class="btn">View Services</a>
+  <span class="brand-logo">Ledger <span class="amp">&amp;</span> Line</span>
+  <div class="eyebrow">Resume engineering, itemized</div>
+  <h1>Your career deserves a better narrative.</h1>
+  <p class="sub">ATS-safe templates, keyword audits, and hand rewrites — priced and delivered like a ledger entry: clear, itemized, closed on time.</p>
+  <a href="#products" class="btn">View Services</a>
+  <a href="#free-audit" class="btn ghost" style="margin-left:10px;">Get a Free Check First</a>
+
+  <div class="sample-slip" style="margin-top:50px;">
+    <div class="slip-head"><span>Line item, before &amp; after</span><span>Sample</span></div>
+    <div class="slip-line before">Responsible for managing a small team</div>
+    <div class="slip-line after">Led a 4-person team to ship 3 releases ahead of schedule</div>
+  </div>
 </header>
 
 <section class="wrap" id="products">
-    <div class="grid">
-        <div class="product">
-            <h3>Standard Templates</h3>
-            <p>Clean, high-precision layouts optimized for ATS readability.</p>
-            <div class="price">$9</div>
-            <button class="btn" style="width:100%" onclick="alert('Proceed with $9 payment via QR code below.')">Download</button>
-        </div>
-        <div class="product">
-            <h3>Resume Audit</h3>
-            <p>A professional breakdown of missing keywords and structural gaps.</p>
-            <div class="price">$15</div>
-            <button class="btn" style="width:100%; background:var(--brass)" onclick="alert('Proceed with $15 payment via QR code below.')">Get Audit</button>
-        </div>
-        <div class="product premium">
-            <h3>Premium Rewrite</h3>
-            <p><strong>I manually re-engineer your profile.</strong></p>
-            <ul style="text-align:left; font-size:0.9em; padding-left:20px;">
-                <li>✓ ATS-Keyword Optimization</li>
-                <li>✓ Achievement Framing</li>
-                <li>✓ 48-Hour Fast Track</li>
-            </ul>
-            <div class="price">$49</div>
-            <button class="btn" style="width:100%" onclick="alert('Proceed with $49 payment via QR code below.')">Get Rewritten</button>
-        </div>
+  <h2 class="section-title">Services</h2>
+  <p class="section-lead">Three ways to work together, depending on how much of the rewrite you want to do yourself.</p>
+  <div class="grid">
+    <div class="product">
+      <h3>Standard Templates</h3>
+      <p>Clean, single-column layouts built to parse correctly in common ATS platforms — no tables, no text boxes, no columns that scramble on import.</p>
+      <div class="price">$9</div>
+      <button class="btn" style="width:100%" onclick="selectOrder('Standard Templates', '$9')">Order this</button>
     </div>
-</section>
-
-<section class="section-box" style="background: #fdfaf5;">
-    <h2>Free Initial Audit</h2>
-    <p>Not sure if you need a rewrite? Send me your details for a quick check.</p>
-    <form action="mailto:hazharkhhazhar@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required><br>
-        <textarea name="comment" placeholder="What is your target job title?" required></textarea><br>
-        <button type="submit" class="btn" style="background: var(--brass);">Request Free Audit</button>
-    </form>
-</section>
-
-<section class="section-box">
-    <h2>Frequently Asked Questions</h2>
-    <div style="max-width: 600px; margin: 0 auto; text-align: left;">
-        <p><strong>Q: Will my resume pass ATS filters?</strong><br>A: Yes, we use industry-specific keywords to ensure you rank high in hiring systems.</p>
-        <p><strong>Q: Why pay via TON?</strong><br>A: It ensures fast, secure, and borderless transactions.</p>
-        <p><strong>Q: How long does it take?</strong><br>A: Premium orders are delivered within 48 hours.</p>
+    <div class="product">
+      <h3>Resume Audit</h3>
+      <p>I read your resume against a real job description and send back a written list of missing keywords, formatting risks, and weak bullet points.</p>
+      <div class="price">$15</div>
+      <button class="btn brass" style="width:100%" onclick="selectOrder('Resume Audit', '$15')">Order this</button>
     </div>
+    <div class="product premium">
+      <h3>Premium Rewrite</h3>
+      <p><strong>I rewrite your resume by hand</strong> — not a template swap.</p>
+      <ul>
+        <li>Keyword alignment to your target role</li>
+        <li>Bullets reframed around outcomes, not duties</li>
+        <li>Delivered within 48 hours</li>
+      </ul>
+      <div class="price">$49</div>
+      <button class="btn" style="width:100%" onclick="selectOrder('Premium Rewrite', '$49')">Order this</button>
+    </div>
+  </div>
 </section>
 
-<section class="section-box">
-    <h2>Secure Payment</h2>
-    <p>Scan to pay via TON network:</p>
-    <img src="https://raw.githubusercontent.com/hazharkhhazhar-crypto/ledger-and-line/main/qr-code.jpg" alt="TON QR Code" class="qr-img">
-    <p style="word-break: break-all;"><strong>Wallet Address:</strong><br>UQDblybQsSLnqYDb7128hTz_NL1xrRLAemUQjqzgy7VAVl35</p>
-    <p style="font-size:0.9em; color:#555;">After payment, email your transaction ID to: <strong>hazharkhhazhar@gmail.com</strong></p>
+<section class="section-box tint">
+  <div class="wrap centered" style="padding:0;">
+    <h2 class="section-title">Who's doing the work</h2>
+    <div class="about-card" style="text-align:left; margin-top:20px;">
+      <div class="about-avatar">AK</div>
+      <div>
+        <p><strong>Ahmed Khezri</strong> runs Ledger & Line as an independent, one-person practice — every audit and rewrite is done personally, not outsourced or templated in bulk.</p>
+        <p>The name is literal: each order is treated like a ledger entry — itemized, dated, and closed out on the deadline promised, not a vague "we'll be in touch."</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<footer class="wrap" style="text-align:center; color:#777; font-size: 0.8em;">
-    <p>Ledger & Line | A professional technical initiative by Ahmed Khezri.</p>
+<section class="wrap" id="free-audit">
+  <div class="centered">
+    <h2 class="section-title">Not sure which one you need?</h2>
+    <p class="section-lead" style="margin-left:auto;margin-right:auto;">Send your target job title and I'll tell you honestly whether a $9 template is enough or whether a rewrite would actually move the needle. No charge, no pressure to upsell.</p>
+  </div>
+  <form class="stack" action="mailto:hazharkhhazhar@gmail.com" method="post" enctype="text/plain">
+    <label for="fa-name">Your name</label>
+    <input id="fa-name" type="text" name="name" placeholder="Jane Doe" required>
+    <label for="fa-role">Target job title</label>
+    <input id="fa-role" type="text" name="target_role" placeholder="e.g. Data Analyst" required>
+    <label for="fa-note">Anything I should know?</label>
+    <textarea id="fa-note" name="note" placeholder="Career change, years of experience, industry..."></textarea>
+    <button type="submit" class="btn brass" style="margin-top:16px;">Request Free Audit</button>
+    <p class="form-note">This opens your email app addressed to hazharkhhazhar@gmail.com. Your details are only used to answer this request — see the note in the footer.</p>
+  </form>
+</section>
+
+<section class="section-box tint" id="order">
+  <div class="wrap centered" style="padding:0;">
+    <h2 class="section-title">Place an order</h2>
+    <p class="section-lead" style="margin-left:auto;margin-right:auto;">Fill this in, then pay using the method in the next section and send your transaction ID. I'll confirm by email within a few hours.</p>
+  </div>
+  <form class="stack" action="mailto:hazharkhhazhar@gmail.com" method="post" enctype="text/plain">
+    <label for="ord-service">Service</label>
+    <select id="ord-service" name="service" required>
+      <option value="">Select a service</option>
+      <option value="Standard Templates ($9)">Standard Templates — $9</option>
+      <option value="Resume Audit ($15)">Resume Audit — $15</option>
+      <option value="Premium Rewrite ($49)">Premium Rewrite — $49</option>
+    </select>
+    <label for="ord-name">Your name</label>
+    <input id="ord-name" type="text" name="name" required>
+    <label for="ord-email">Email to send your files to</label>
+    <input id="ord-email" type="email" name="email" required>
+    <label for="ord-role">Target job title / industry</label>
+    <input id="ord-role" type="text" name="target_role" required>
+    <button type="submit" class="btn" style="margin-top:16px;">Continue to Payment</button>
+    <p class="form-note">This opens your email app with your order pre-filled. Attach your current resume to that email before sending.</p>
+  </form>
+</section>
+
+<section class="wrap" id="faq">
+  <h2 class="section-title centered" style="text-align:center;">Frequently Asked Questions</h2>
+  <div style="margin-top:30px;">
+    <div class="faq-item">
+      <h4>Will my resume pass ATS filters?</h4>
+      <p>No one can guarantee a pass rate — it depends on the specific system a company uses and how closely your background matches the role. What I can guarantee is a format that parses cleanly (no tables, columns, or graphics that get mangled) and language aligned to the keywords in the job description you give me.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Why pay via TON?</h4>
+      <p>It's the payment rail I currently have set up, and it settles fast without a payment processor taking a cut. If TON isn't practical for you, email me first — I can usually arrange an alternative.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How long does it take?</h4>
+      <p>Premium Rewrites are delivered within 48 hours of your payment and files arriving. Audits are typically same-day. Standard Templates are sent within a few hours.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What do I actually receive?</h4>
+      <p>A Word (.docx) and PDF version of your resume, sent to the email address you provide in the order form.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can I get a refund?</h4>
+      <p>If I haven't started work on your order, yes. Once a rewrite or audit has been delivered, it's final — email me if something's wrong and I'll fix it rather than refund it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-box" id="payment">
+  <div class="wrap centered" style="padding:0;">
+    <h2 class="section-title">Payment</h2>
+    <p class="section-lead" style="margin-left:auto;margin-right:auto;">Scan to pay via the TON network.</p>
+    <img src="qr-code.jpg" alt="QR code for TON wallet payment" class="qr-img">
+    <div class="wallet-box">
+      UQDblybQsSLnqYDb7128hTz_NL1xrRLAemUQjqzgy7VAVl35
+    </div>
+    <button class="copy-btn" onclick="copyWallet()">Copy address</button>
+    <p class="form-note" style="max-width:480px; margin-left:auto; margin-right:auto;">After paying, email your transaction ID and order details to <strong>hazharkhhazhar@gmail.com</strong>.</p>
+    <p class="alt-pay">Don't use TON? Email me before ordering and I'll arrange another way to pay.</p>
+  </div>
+</section>
+
+<footer class="wrap">
+  <p>Ledger & Line — a one-person practice run by Ahmed Khezri.</p>
+  <p class="legal">Details submitted through the forms on this page (name, email, job title, resume files) are used only to prepare your order and are not sold or shared. Contact <a class="underline" href="mailto:hazharkhhazhar@gmail.com">hazharkhhazhar@gmail.com</a> to have your information deleted.</p>
 </footer>
+
+<script>
+  function selectOrder(service, price) {
+    var select = document.getElementById('ord-service');
+    for (var i = 0; i < select.options.length; i++) {
+      if (select.options[i].value.indexOf(service) === 0) {
+        select.value = select.options[i].value;
+        break;
+      }
+    }
+    document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+  }
+  function copyWallet() {
+    var addr = "UQDblybQsSLnqYDb7128hTz_NL1xrRLAemUQjqzgy7VAVl35";
+    navigator.clipboard.writeText(addr).then(function() {
+      var btn = document.querySelector('.copy-btn');
+      var original = btn.textContent;
+      btn.textContent = "Copied";
+      setTimeout(function(){ btn.textContent = original; }, 1500);
+    });
+  }
+</script>
 
 </body>
 </html>
