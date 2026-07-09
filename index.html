@@ -12,6 +12,24 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%232F4A3C'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%239C7A3C' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Resume Writing",
+  "provider": {
+    "@type": "Person",
+    "name": "Ahmed Khezri"
+  },
+  "name": "Ledger & Line",
+  "description": "ATS-safe resume templates, keyword audits, and hand rewrites.",
+  "offers": [
+    { "@type": "Offer", "name": "Standard Templates", "price": "9", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Resume Audit", "price": "15", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Premium Rewrite", "price": "49", "priceCurrency": "USD" }
+  ]
+}
+</script>
 <style>
   :root {
     --ink: #1C2230;
@@ -143,6 +161,44 @@
   .faq-item p { margin: 0; color: var(--muted); font-size: 14.5px; }
 
   .qr-img { width: 160px; height: 160px; margin: 20px auto 10px; border: 3px solid var(--brass); padding: 5px; display: block; background: white; }
+
+  /* Sticky nav */
+  .topnav {
+    position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(4px); border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 24px;
+  }
+  .topnav .nav-brand { font-family: 'Fraunces', serif; font-weight: 800; font-size: 18px; color: var(--forest); text-decoration: none; }
+  .topnav .nav-links { display: flex; gap: 22px; align-items: center; }
+  .topnav .nav-links a { font-size: 14px; font-weight: 600; text-decoration: none; color: var(--ink); }
+  .topnav .nav-links a:hover { color: var(--brass); }
+  .topnav .nav-cta { background: var(--brass); color: white; padding: 8px 16px; border-radius: 2px; font-size: 13.5px; font-weight: 700; text-decoration: none; }
+  @media (max-width: 640px) {
+    .topnav .nav-links a:not(.nav-cta) { display: none; }
+  }
+
+  /* Trust strip */
+  .trust-strip {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 28px;
+    max-width: 620px; margin: 26px auto 0; font-size: 13.5px; color: var(--muted);
+  }
+  .trust-strip span { white-space: nowrap; }
+  .trust-strip strong { color: var(--forest); }
+
+  /* Guarantee note under pricing */
+  .guarantee-note {
+    max-width: 620px; margin: 28px auto 0; text-align: center; font-size: 14px;
+    color: var(--muted); padding: 14px 20px; border: 1px dashed var(--line); border-radius: 4px;
+  }
+
+  /* Manual-copy fallback for forms */
+  .fallback-toggle { background: none; border: none; text-decoration: underline; color: var(--muted); font-size: 12.5px; cursor: pointer; padding: 0; margin-top: 10px; }
+  .fallback-box { display: none; margin-top: 10px; }
+  .fallback-box.open { display: block; }
+  .fallback-box textarea { min-height: 110px; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; }
+  .fallback-copy-btn { margin-top: 8px; font-size: 12.5px; padding: 6px 14px; background: var(--ink); color: white; border: none; border-radius: 2px; cursor: pointer; }
+  .fallback-copy-btn:hover { background: var(--forest); }
   .wallet-box {
     max-width: 480px; margin: 16px auto 0; background: var(--paper); border: 1px solid var(--line);
     border-radius: 4px; padding: 14px 18px; font-family: 'JetBrains Mono', monospace; font-size: 13px;
@@ -168,6 +224,16 @@
 </head>
 <body>
 
+<nav class="topnav">
+  <a href="#" class="nav-brand">Ledger &amp; Line</a>
+  <div class="nav-links">
+    <a href="#products">Services</a>
+    <a href="#faq">FAQ</a>
+    <a href="#payment">Payment</a>
+    <a href="#order" class="nav-cta">Order Now</a>
+  </div>
+</nav>
+
 <header class="hero">
   <span class="brand-logo">Ledger <span class="amp">&amp;</span> Line</span>
   <div class="eyebrow">Resume engineering, itemized</div>
@@ -175,6 +241,12 @@
   <p class="sub">ATS-safe templates, keyword audits, and hand rewrites — priced and delivered like a ledger entry: clear, itemized, closed on time.</p>
   <a href="#products" class="btn">View Services</a>
   <a href="#free-audit" class="btn ghost" style="margin-left:10px;">Get a Free Check First</a>
+
+  <div class="trust-strip">
+    <span><strong>48-hour</strong> delivery</span>
+    <span><strong>Personally</strong> handled, every order</span>
+    <span><strong>Refund</strong> if work hasn't started</span>
+  </div>
 
   <div class="sample-slip" style="margin-top:50px;">
     <div class="slip-head"><span>Line item, before &amp; after</span><span>Sample</span></div>
@@ -194,13 +266,13 @@
         <img src="template-preview.jpg" alt="Preview of the ATS-safe resume template" class="product-thumb">
       </a>
       <div class="price">$9</div>
-      <button class="btn" style="width:100%" onclick="selectOrder('Standard Templates', '$9')">Order this</button>
+      <button class="btn" style="width:100%" onclick="selectOrder('Standard Templates', '$9')">Get the template</button>
     </div>
     <div class="product">
       <h3>Resume Audit</h3>
       <p>I read your resume against a real job description and send back a written list of missing keywords, formatting risks, and weak bullet points.</p>
       <div class="price">$15</div>
-      <button class="btn brass" style="width:100%" onclick="selectOrder('Resume Audit', '$15')">Order this</button>
+      <button class="btn brass" style="width:100%" onclick="selectOrder('Resume Audit', '$15')">Get my audit</button>
     </div>
     <div class="product premium">
       <h3>Premium Rewrite</h3>
@@ -211,9 +283,10 @@
         <li>Delivered within 48 hours</li>
       </ul>
       <div class="price">$49</div>
-      <button class="btn" style="width:100%" onclick="selectOrder('Premium Rewrite', '$49')">Order this</button>
+      <button class="btn" style="width:100%" onclick="selectOrder('Premium Rewrite', '$49')">Start my rewrite</button>
     </div>
   </div>
+  <p class="guarantee-note">Haven't started your order yet? Full refund, no questions asked. Once work has begun I'll fix anything that's wrong rather than refund — see the FAQ below.</p>
 </section>
 
 <section class="section-box tint">
@@ -234,7 +307,7 @@
     <h2 class="section-title">Not sure which one you need?</h2>
     <p class="section-lead" style="margin-left:auto;margin-right:auto;">Send your target job title and I'll tell you honestly whether a $9 template is enough or whether a rewrite would actually move the needle. No charge, no pressure to upsell.</p>
   </div>
-  <form class="stack" action="mailto:hazharkhhazhar@gmail.com" method="post" enctype="text/plain">
+  <form class="stack" action="mailto:hazharkhhazhar@gmail.com" method="post" enctype="text/plain" id="audit-form">
     <label for="fa-name">Your name</label>
     <input id="fa-name" type="text" name="name" placeholder="Jane Doe" required>
     <label for="fa-role">Target job title</label>
@@ -243,6 +316,12 @@
     <textarea id="fa-note" name="note" placeholder="Career change, years of experience, industry..."></textarea>
     <button type="submit" class="btn brass" style="margin-top:16px;">Request Free Audit</button>
     <p class="form-note">This opens your email app addressed to hazharkhhazhar@gmail.com. Your details are only used to answer this request — see the note in the footer.</p>
+    <button type="button" class="fallback-toggle" onclick="toggleFallback('audit-fallback', 'audit-form')">Nothing happened when you clicked? Copy your details instead</button>
+    <div class="fallback-box" id="audit-fallback">
+      <textarea readonly id="audit-fallback-text"></textarea>
+      <button type="button" class="fallback-copy-btn" onclick="copyFallback('audit-fallback-text')">Copy text</button>
+      <p class="form-note">Copy this and paste it into an email to <strong>hazharkhhazhar@gmail.com</strong> from whatever email app you actually use.</p>
+    </div>
   </form>
 </section>
 
@@ -251,7 +330,7 @@
     <h2 class="section-title">Place an order</h2>
     <p class="section-lead" style="margin-left:auto;margin-right:auto;">Fill this in, then pay using the method in the next section and send your transaction ID. I'll confirm by email within a few hours.</p>
   </div>
-  <form class="stack" action="mailto:hazharkhhazhar@gmail.com" method="post" enctype="text/plain">
+  <form class="stack" action="mailto:hazharkhhazhar@gmail.com" method="post" enctype="text/plain" id="order-form">
     <label for="ord-service">Service</label>
     <select id="ord-service" name="service" required>
       <option value="">Select a service</option>
@@ -267,6 +346,12 @@
     <input id="ord-role" type="text" name="target_role" required>
     <button type="submit" class="btn" style="margin-top:16px;">Continue to Payment</button>
     <p class="form-note">This opens your email app with your order pre-filled. Attach your current resume to that email before sending.</p>
+    <button type="button" class="fallback-toggle" onclick="toggleFallback('order-fallback', 'order-form')">Nothing happened when you clicked? Copy your details instead</button>
+    <div class="fallback-box" id="order-fallback">
+      <textarea readonly id="order-fallback-text"></textarea>
+      <button type="button" class="fallback-copy-btn" onclick="copyFallback('order-fallback-text')">Copy text</button>
+      <p class="form-note">Copy this, paste it into an email to <strong>hazharkhhazhar@gmail.com</strong>, and attach your current resume before sending.</p>
+    </div>
   </form>
 </section>
 
@@ -316,6 +401,30 @@
 </footer>
 
 <script>
+  function toggleFallback(boxId, formId) {
+    var box = document.getElementById(boxId);
+    var isOpen = box.classList.toggle('open');
+    if (isOpen) {
+      var form = document.getElementById(formId);
+      var lines = [];
+      var els = form.querySelectorAll('input[name], select[name], textarea[name]');
+      els.forEach(function(el) {
+        var labelEl = form.querySelector('label[for="' + el.id + '"]');
+        var label = labelEl ? labelEl.textContent : el.name;
+        if (el.value) lines.push(label + ': ' + el.value);
+      });
+      var textarea = box.querySelector('textarea');
+      textarea.value = lines.join('\n');
+    }
+  }
+  function copyFallback(textareaId) {
+    var ta = document.getElementById(textareaId);
+    ta.select();
+    navigator.clipboard.writeText(ta.value).then(function() {
+      event.target.textContent = "Copied";
+      setTimeout(function(){ event.target.textContent = "Copy text"; }, 1500);
+    });
+  }
   function selectOrder(service, price) {
     var select = document.getElementById('ord-service');
     for (var i = 0; i < select.options.length; i++) {
